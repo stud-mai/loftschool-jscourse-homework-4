@@ -13,13 +13,13 @@ let scanDom = (param = document.body) => {
         if (!data.tags[tags]){
             data.tags[tags] = 1
         } else {
-            data.tags[tags] += 1
+            data.tags[tags]++
         }
         for (let cl of classes){
             if (!data.classes[cl]){
                 data.classes[cl] = 1
             } else {
-                data.classes[cl] += 1
+                data.classes[cl]++
             }
         }
     }
@@ -37,10 +37,10 @@ let scanDom = (param = document.body) => {
                 seekAndCount(tags,classes);
                 break;
             case 3:
-                data.text += 1;
+                data.text++;
                 break;
             case 8:
-                data.comment += 1;
+                data.comment++;
                 break;
         }
     }
